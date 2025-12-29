@@ -104,7 +104,7 @@ function showData(id, main, temp, feels_like, humidity, wind, cityName) {
   let icon;
   console.log(cityName);
   if (id == 800) {
-    icon = "https://openweathermap.org/img/wn/01d@2x.png";
+    icon = "https://openweathermap.org/img/wn/01d.png";
   } else if (id >= 200 && id <= 50) {
     icon = 1127;
   } else if (id >= 300 && id <= 350) {
@@ -135,3 +135,4 @@ function showData(id, main, temp, feels_like, humidity, wind, cityName) {
       
       `;
 }
+
