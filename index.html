@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <script
+      src="https://kit.fontawesome.com/237f78c953.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="h-screen w-screen bg-[url(bg.jpg)] bg-cover bg-center">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-blue-900/60"></div>
+
+    <header class="relative z-20 mb-20">
+      <nav>
+        <ul
+          class="text-2 flex space-x-4 bg-blue-900/70 p-5 text-white *:hover:text-pink-500"
+        >
+          <li>
+            <a href="#"><i class="fa-solid fa-house mr-1"></i>Home</a>
+          </li>
+          <li>
+            <a href="aboutus.html"
+              ><i class="fa-solid fa-circle-info mr-1"></i>About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      class="relative mx-auto flex w-full flex-col items-center justify-center px-4 font-sans lg:w-5xl"
+    >
+      <!-- Content -->
+      <section
+        class="relative z-10 flex w-full max-w-sm flex-col items-center justify-center rounded-xl border border-white/30 bg-white/10 p-4 text-white backdrop-blur-md sm:max-w-md sm:p-6"
+      >
+        <!-- headers -->
+        <header class="mb-5 w-full text-center">
+          <h1 class="text-bold text-4xl font-bold text-blue-950 uppercase">
+            Afghan Weather
+          </h1>
+          <p class="text-2xl font-thin">Check real-time weather</p>
+        </header>
+
+        <!-- input group -->
+        <div
+          class="flex w-full flex-col place-content-around gap-3 md:flex-row"
+        >
+          <input
+            type="text"
+            required
+            class="search-input border-b-2 p-2 invalid:border-red-600 invalid:text-red-600 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+            placeholder="Enter City Name:"
+          />
+          <button
+            id="btn-search"
+            class="btn-search w-full cursor-pointer rounded-md bg-blue-600 px-4 py-2 transition hover:bg-blue-700 sm:w-auto"
+          >
+            Search
+          </button>
+        </div>
+        <article class="grid w-full grid-cols-1 p-3 font-thin" id="weather">
+          <section class="week-weather"></section>
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="source.js"></script>
+    <script src="weak-weather.js"></script>
+  </body>
+</html>
